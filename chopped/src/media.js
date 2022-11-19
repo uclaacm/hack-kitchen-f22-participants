@@ -2,14 +2,16 @@ import "./media.css";
 
 const Media = (props) => {
     const _handleClick = () => {
-        console.log("Test Test");
+        console.log("Showing in full screen!");
     }
 
-    return(
+    return (
         <div className="container">
-            <img src={props.source} alt={props.alt} width={props.width} height={props.height} className="image"/>
+            <img src={props.source} alt={props.alt} className="image"/>
             <div className="middle">
-                <button onClick={_handleClick} className="text"/>
+                <a href={props.source} target="_blank" rel="noreferrer">
+                    <button onClick={_handleClick} className="text">Show in Fullscreen</button>
+                </a>
             </div>
         </div>
     );
